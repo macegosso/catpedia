@@ -1,0 +1,40 @@
+{
+  "name": "flickity-imagesloaded",
+  "main": "flickity-imagesloaded.js",
+  "dependencies": {
+    "flickity": "^2.0.0",
+    "imagesloaded": "^4.1.0"
+  },
+  "devDependencies": {
+    "qunit": "^2.0.0"
+  },
+  "homepage": "https://github.com/metafizzy/flickity-imagesloaded",
+  "authors": [
+    "David DeSandro"
+  ],
+  "description": "Enable imagesLoaded option for Flickity",
+  "keywords": [
+    "flickity",
+    "imagesloaded"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "package.json"
+  ],
+  "version": "2.0.0",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.0",
+    "commit": "d90eff144d111464bf2a67ac3ab240d8078a80cb"
+  },
+  "_source": "https://github.com/metafizzy/flickity-imagesloaded.git",
+  "_target": "^2.0.0",
+  "_originalSource": "flickity-imagesloaded",
+  "_direct": true
+}

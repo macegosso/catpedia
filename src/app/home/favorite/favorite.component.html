@@ -1,0 +1,8 @@
+<div class="card">
+    <mat-card mat-card-image class="card__mat" *ngFor="let cat of catData" (click)="routeInfo(cat.image_id)">
+        <img class="card__mat__img" [src]="cat.image.url">
+        <mat-card-actions class="card__mat__actions">
+            <button mat-flat-button color="warn" id="remover" (click)="delFav(cat.id)">Remover Favorito</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

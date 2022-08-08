@@ -1,0 +1,12 @@
+    <div class="card">
+        <mat-card mat-card-image class="card__mat" *ngFor="let cat of catData" (click)="routeInfo(cat.id)">
+            <img class="card__mat__img" mat-card-image [src]="cat.url">
+            <mat-card-title class="card__mat__txt">{{cat.breeds[0].name}}</mat-card-title>
+            <mat-card-subtitle class="card__mat__txt">{{cat.breeds[0].origin}}</mat-card-subtitle>
+            <mat-card-actions class="card__mat__actions">
+                <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                    <mat-icon (click)="favCats(cat.id)" [ngStyle]="{'color': ('favorited' ? '#929277' : '#f44336')}">favorite</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>

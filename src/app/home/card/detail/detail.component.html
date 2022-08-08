@@ -1,0 +1,15 @@
+<mat-card class="card">
+    <mat-card-content class="card__mat">
+        <img mat-card-image [src]="catData.url">
+        <h2 class="card__mat__txt">{{catData.breeds[0].name}} ({{catData.breeds[0].origin}})</h2>
+        <p class="card__mat__txt">Descrição:</p>
+        <p>{{catData.breeds[0].description}}</p>
+        <p class="card__mat__txt">Temperamento:</p>
+        <p>{{catData.breeds[0].temperament}}</p>
+        <p class="card__mat__txt">Expectativa de vida:</p>
+        <p>{{catData.breeds[0].life_span}} anos</p>
+        <p class="link">Para saber mais, clique no link abaixo: <a [href]="catData.breeds[0].wikipedia_url" target="_blank">{{catData.breeds[0].wikipedia_url}}</a></p>
+        <br>
+        <br>
+    </mat-card-content>
+</mat-card>
