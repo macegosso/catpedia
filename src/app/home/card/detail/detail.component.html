@@ -1,15 +1,21 @@
 <mat-card class="card">
-    <img mat-card-image class="card card__img" [src]="catData.url">
-    <mat-card-title class="card card__title">{{catData.breeds[0].origin}}</mat-card-title>
+    <img mat-card-image class="card card__img" [src]="cat.url">
+    <mat-card-title class="card card__title">{{cat.breeds[0].origin}}</mat-card-title>
+    <section class="card card__btn-favorite">
+        <button mat-icon-button color="warn">
+            <mat-icon (click)="favCats(cat.id)" (click)="routeFav(cat.id)" color="red">favorite</mat-icon>
+        </button>
+    </section>
     <mat-card-content class="card card__text">
         <p>Descrição:</p>
-        <p>{{catData.breeds[0].description}}</p>
+        <p>{{cat.breeds[0].description}}</p>
         <p>Temperamento:</p>
-        <p>{{catData.breeds[0].temperament}}</p>
+        <p>{{cat.breeds[0].temperament}}</p>
         <p>Expectativa de vida:</p>
-        <p>{{catData.breeds[0].life_span}} anos</p>
+        <p>{{cat.breeds[0].life_span}} anos</p>
     </mat-card-content>
-    <mat-card-actions class="card card__btn">
-        <p>Para saber mais, clique no link abaixo: <a [href]="catData.breeds[0].wikipedia_url" target="_blank">{{catData.breeds[0].wikipedia_url}}</a></p>
+    <mat-card-actions class="card card__btn" >
+        <p>Para saber mais, clique no link abaixo: 
+            <a [href]="cat.breeds[0].wikipedia_url" target="_blank">{{cat.breeds[0].wikipedia_url}}</a></p>
     </mat-card-actions>
 </mat-card>

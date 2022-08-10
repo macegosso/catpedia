@@ -22,6 +22,9 @@ export class catApiService {
     ).pipe(retry(1), 
     catchError(this.fail))
   }
+
+  
+
   fail(error: HttpErrorResponse){
     console.log(error)
     return throwError(error)
