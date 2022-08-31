@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { catModel } from '../../cat.model';
-import { catApiService } from '../../catApi.service';
+import { catModel } from '../../../models/cat.model';
+import { catApiService } from '../../../services/catApi.service';
 
 @Component({
   selector: 'app-detail',
@@ -14,13 +14,12 @@ export class DetailComponent implements OnInit {
   constructor(private catService: catApiService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.catService.getCatById(this.route.snapshot.params["id"]).subscribe((info: catModel)=>{this.cat=info;console.log(info)})
+    this.catService.getCatById(this.route.snapshot.params["id"]).subscribe((info: catModel)=>{this.cat=info})
   }
 
   favCats(id: any){
     return this.catService.favAdd(id).subscribe((a)=>{
-      console.log(id)
-    })
+})
   }
 
   routeFav(id: any){

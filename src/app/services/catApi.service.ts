@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { catchError, Observable, retry, throwError } from 'rxjs';
-import { catModel, gatos } from './cat.model';
+import { catModel, gatos } from '../models/cat.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +22,6 @@ export class catApiService {
     ).pipe(retry(1), 
     catchError(this.fail))
   }
-
-  
 
   fail(error: HttpErrorResponse){
     console.log(error)

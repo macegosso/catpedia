@@ -1,7 +1,7 @@
-import { gatos } from '../../cat.model';
 import { Component, OnInit } from '@angular/core';
-import { catApiService } from '../../catApi.service';
+import { catApiService } from 'src/app/services/catApi.service';
 import { Router } from '@angular/router';
+import { gatos } from 'src/app/models/cat.model';
 
 @Component({
   selector: 'app-cards',
@@ -10,19 +10,16 @@ import { Router } from '@angular/router';
 })
 export class CardsComponent implements OnInit {
 
-  favorited: boolean = false
   catData: any 
 
   constructor(private catService: catApiService, private router: Router) { }
 
   ngOnInit(): void {
-    this.catService.getCat().subscribe((infos: gatos[])=>{this.catData=infos;console.log(infos)})
+    this.catService.getCat().subscribe((infos: gatos[])=>{this.catData=infos})
   }
 
   favCats(id: string){
-    return this.catService.favAdd(id).subscribe((a)=>{
-      console.log(id)
-    })
+    return this.catService.favAdd(id).subscribe((a)=>{})
   }
 
   routeInfo(id: number){
